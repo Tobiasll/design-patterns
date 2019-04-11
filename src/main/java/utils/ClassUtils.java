@@ -11,11 +11,7 @@ public class ClassUtils {
   public static ArrayList<Class> getAllClassByInterface(Class clazz) {
     ArrayList<Class> list = new ArrayList<>();
 
-    // 判断是否是一个接口
     if (clazz.isInterface()) {
-      getSubClass(clazz, list);
-    } else {
-      // 如果不是接口，则获取它的所有子类
       getSubClass(clazz, list);
     }
     return list;
@@ -37,14 +33,9 @@ public class ClassUtils {
     }
   }
 
-  /**
-   * 从一个指定路径下查找所有的类
-   */
-  @SuppressWarnings("rawtypes")
   private static ArrayList<Class> getAllClass(String packagename) {
     ArrayList<Class> list = new ArrayList<>();
-    // 返回对当前正在执行的线程对象的引用。
-    // 返回该线程的上下文 ClassLoader。
+
     ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
     String path = packagename.replace('.', '/');
     try {
@@ -71,7 +62,6 @@ public class ClassUtils {
     if (!file.exists()) {
       return list;
     }
-    // 返回一个抽象路径名数组，这些路径名表示此抽象路径名表示的目录中的文件。
     File[] files = file.listFiles();
     assert files != null;
     for (File file2 : files) {
@@ -82,7 +72,6 @@ public class ClassUtils {
         }
       } else if (file2.getName().endsWith(".class")) {
         try {
-          // 保存的类文件不需要后缀.class
           list.add(Class.forName(packagename + '.' + file2.getName().substring(0, file2.getName().length() - 6)));
         } catch (ClassNotFoundException e) {
           System.out.println("出现异常 : " + e.getMessage());

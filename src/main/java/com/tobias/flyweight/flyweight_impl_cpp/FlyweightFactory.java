@@ -10,13 +10,13 @@ import utils.StringUtils;
 
 /**
  * @author tobias
- * @description 享元设计模式工厂对象
+ * @description 享元设计模式工厂对象、单例模式
  * @version  1.0.0
  */
 public class FlyweightFactory {
 
-  private Map<String, Flyweight> mpFlyweight = new HashMap<>();
-  private Map<String, Class> flyweightClasses = new HashMap<>();
+  private static Map<String, Flyweight> mpFlyweight = new HashMap<>();
+  private volatile static Map<String, Class> flyweightClasses;
 
   {
     initialization();
@@ -24,6 +24,14 @@ public class FlyweightFactory {
 
   private void initialization() {
     ArrayList<Class> allClassByInterface = ClassUtils.getAllClassByInterface(Flyweight.class);
+
+    if (flyweightClasses == null) {
+      synchronized (FlyweightFactory.class) {
+        if (flyweightClasses == null) {
+          flyweightClasses = new HashMap<>(allClassByInterface.size());
+        }
+      }
+    }
     for (Class aClass : allClassByInterface) {
       flyweightClasses.put(StringUtils.getCamelCaseStringAndToUpCase(aClass.getSimpleName()), aClass);
     }
