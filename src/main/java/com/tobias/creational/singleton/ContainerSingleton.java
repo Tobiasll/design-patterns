@@ -36,4 +36,9 @@ public class ContainerSingleton implements Serializable {
     return INSTANCES.get(key);
   }
 
+  public static Map<String, Object> getUnmodifiedMap() {
+    return Collections.unmodifiableMap(INSTANCES);
+  }
+
+
 }

@@ -6,12 +6,13 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 
 public class Main {
 
   public static void main(String[] args) throws Exception {
-    enumTest();
-//    doubleLockTest();
+//    enumTest();
+    doubleLockTest();
 //    hungryTest();
 //    staticInnerClassSingletonTest();
   }
@@ -50,6 +51,10 @@ public class Main {
     DoubleLockSingleton o1 = (DoubleLockSingleton) reflectAttack(doubleLockSingleton.getClass());
     System.out.println(o1);
     System.out.println(doubleLockSingleton == o1);
+
+    DoubleLockSingleton o2 = (DoubleLockSingleton) reflactCloneMethodAttack(doubleLockSingleton.getClass());
+    System.out.println(o2);
+    System.out.println(doubleLockSingleton == o2);
   }
 
   private static void enumTest() throws Exception {
@@ -89,5 +94,15 @@ public class Main {
     declaredConstructor.setAccessible(true);
     return declaredConstructor.newInstance("tobias", 1);
   }
+
+  private static Object reflactCloneMethodAttack(Class clazz) throws Exception {
+    Method clone = clazz.getDeclaredMethod("clone");
+    clone.setAccessible(true);
+    Constructor declaredConstructor = clazz.getDeclaredConstructor();
+    declaredConstructor.setAccessible(true);
+    return clone.invoke(declaredConstructor.newInstance());
+  }
+
+
 
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public enum EnumSingleton implements Serializable {
+public enum EnumSingleton implements Serializable,Cloneable {
   /**
    *
    */
@@ -30,6 +30,7 @@ public enum EnumSingleton implements Serializable {
         list.add(number);
       }
       return count;
+
     }
 
     @Override
@@ -61,6 +62,8 @@ public enum EnumSingleton implements Serializable {
   public Object getObject() {
     return object;
   }
+
+
 
 
 }
