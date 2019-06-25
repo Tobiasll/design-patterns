@@ -8,6 +8,6 @@ public class Main {
   public static void main(String[] args) {
     UserDaoProxyFactory userDaoProxyFactory = new UserDaoProxyFactory(new UserDaoImpl());
     IUserDao proxyInstance = (IUserDao) userDaoProxyFactory.getProxyInstance();
-    proxyInstance.sava("test");
+    proxyInstance.sava("call");
   }
 }

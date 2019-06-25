@@ -11,6 +11,6 @@ public class Main {
     // 只是获取对象，并不会触发InvocationHandler().invoke()方法
     IUserDao userDao = userDaoProxyFactory.getAfterObjcetByDynamicProxy();
     // 调用方法时才开始执行代理的目标对象方法
-    userDao.sava("test");
+    userDao.sava("call");
   }
 }

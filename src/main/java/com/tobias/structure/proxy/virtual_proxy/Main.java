@@ -7,7 +7,7 @@ public class Main {
 
   public static void main(String[] args) {
     try {
-      HightResolvedImageProxy hightResolvedImageProxy = new HightResolvedImageProxy( new HightResolvedImage(new URL("http:test.png")));
+      HightResolvedImageProxy hightResolvedImageProxy = new HightResolvedImageProxy( new HightResolvedImage(new URL("http:call.png")));
       hightResolvedImageProxy.showImage();
     } catch (MalformedURLException ignored) {}
   }

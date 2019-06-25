@@ -4,7 +4,7 @@ public class Main {
 
   public static void main(String[] args) {
     IUserDao userDao = new UserDaoImplProxy(new UserDaoImpl());
-    userDao.sava("test");
+    userDao.sava("call");
   }
 
 }

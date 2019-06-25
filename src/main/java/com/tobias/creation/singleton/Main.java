@@ -75,10 +75,10 @@ public class Main {
   }
 
   private static Object serializableAttack(Object o) throws Exception {
-    ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("test")));
+    ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("call")));
     oos.writeObject(o);
 
-    ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("test")));
+    ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("call")));
     return ois.readObject();
 
   }

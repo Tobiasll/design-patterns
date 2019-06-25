@@ -14,12 +14,7 @@ public class Main {
       System.out.print( bufferedReader.readLine());
     }
 
-    System.out.println(bufferedReader.readLine());
-    /*while((str=bufferedReader.readLine())!=null) {
-      System.out.println(str);
-    }
-    LineReaderDecorate lineReaderDecorate = new LineReaderDecorate(bufferedReader);
-    lineReaderDecorate.read(new char[1024], 0, 10)*/;
+
   }
 
   public static void testHumburger() {

@@ -5,7 +5,7 @@ import java.util.List;
 public class Main {
 
   public static void main(String[] args) throws Exception {
-   Prototype prototype = new Prototype("test");
+   Prototype prototype = new Prototype("call");
     Prototype clone = (Prototype) prototype.clone();
     List<Object> list = prototype.getList();
     list.clear();
