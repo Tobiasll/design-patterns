@@ -39,7 +39,7 @@ public class CatalogCourseComponent implements CatalogComponent {
     System.out.println("目录 : " + name);
     for (CatalogComponent catalogComponent : list) {
       if (this.getLevel() != null) {
-        for (int i = 0; i <  this.getLevel(); i++) {
+        for (int i = 0; i < this.getLevel(); i++) {
           System.out.print("    ");
         }
       }

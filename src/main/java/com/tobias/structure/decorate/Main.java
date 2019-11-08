@@ -7,11 +7,12 @@ import java.io.FileReader;
 public class Main {
 
   public static void main(String[] args) throws Exception {
-    BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("D:\\develop\\java_project\\design_patterns\\src\\main\\java\\com\\tobias\\Adapter\\Client.java")));
+    BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(
+        "D:\\develop\\java_project\\design_patterns\\src\\main\\java\\com\\tobias\\Adapter\\Client.java")));
     String str = null;
 
     while (bufferedReader.read() != -1) {
-      System.out.print( bufferedReader.readLine());
+      System.out.print(bufferedReader.readLine());
     }
 
 

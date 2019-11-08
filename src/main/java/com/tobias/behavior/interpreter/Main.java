@@ -5,7 +5,7 @@ import java.util.Stack;
 public class Main {
 
   public static void main(String[] args) {
-    String[] arr = {"6" , "100", "11", "+", "*"};
+    String[] arr = {"6", "100", "11", "+", "*"};
     Stack<Object> stack = new Stack<>();
     for (String s : arr) {
       if ("+".equals(s) | "*".equals(s)) {

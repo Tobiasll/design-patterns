@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public enum EnumSingleton implements Serializable,Cloneable {
+public enum EnumSingleton implements Serializable, Cloneable {
   /**
    *
    */
@@ -16,9 +16,9 @@ public enum EnumSingleton implements Serializable,Cloneable {
     private final List<Integer> list = new ArrayList<>();
 
 
-     @Override
-     public int countingRandomSameNumber() {
-       int count = 0;
+    @Override
+    public int countingRandomSameNumber() {
+      int count = 0;
 
       for (int i = 0; i < 1000; i++) {
         int number = RANDOM.nextInt(9999);
@@ -35,13 +35,13 @@ public enum EnumSingleton implements Serializable,Cloneable {
 
     @Override
     public int getListSize() {
-       return list.size();
+      return list.size();
     }
 
     @Override
     public int cleanList() {
-       list.clear();
-       return list.size();
+      list.clear();
+      return list.size();
     }
 
   };
@@ -62,8 +62,6 @@ public enum EnumSingleton implements Serializable,Cloneable {
   public Object getObject() {
     return object;
   }
-
-
 
 
 }

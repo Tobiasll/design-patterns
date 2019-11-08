@@ -10,8 +10,8 @@ import utils.StringUtils;
 
 /**
  * @author tobias
+ * @version 1.0.0
  * @description 享元设计模式工厂对象、单例模式
- * @version  1.0.0
  */
 public class FlyweightFactory {
 
@@ -33,7 +33,8 @@ public class FlyweightFactory {
       }
     }
     for (Class aClass : allClassByInterface) {
-      flyweightClasses.put(StringUtils.getCamelCaseStringAndToUpCase(aClass.getSimpleName()), aClass);
+      flyweightClasses
+          .put(StringUtils.getCamelCaseStringAndToUpCase(aClass.getSimpleName()), aClass);
     }
   }
 
@@ -55,7 +56,7 @@ public class FlyweightFactory {
           e.printStackTrace();
         }
       }
-    } else if (mpFlyweight.get(key) == null){
+    } else if (mpFlyweight.get(key) == null) {
       flyweight = new DefalutConcreteFlyweight(0);
       mpFlyweight.put(key, flyweight);
       return flyweight;

@@ -11,7 +11,8 @@ public class ThreadLocalSingleton implements Serializable {
     THREAD_LOCAL_SINGLETON_THREAD_LOCAL.set(new ThreadLocalSingleton());
   }
 
-  private ThreadLocalSingleton(){}
+  private ThreadLocalSingleton() {
+  }
 
   public static ThreadLocalSingleton getInstance() {
     return THREAD_LOCAL_SINGLETON_THREAD_LOCAL.get();

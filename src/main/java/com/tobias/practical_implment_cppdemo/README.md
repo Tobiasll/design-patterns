@@ -1,0 +1,1 @@
+## this package for practice design patterns, I will implement demo from  cpp codes in https://design-patterns.readthedocs.io/zh_CN/latest/structural_patterns/bridge.html

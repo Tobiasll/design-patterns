@@ -1,6 +1,6 @@
 package com.tobias.structure.decorate;
 
-public class EggDecorate extends GarnishDecorate  {
+public class EggDecorate extends GarnishDecorate {
 
   private Humburger humburger;
 

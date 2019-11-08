@@ -7,7 +7,7 @@ public interface Animal {
 
   void running();
 
-  default String getName()  {
+  default String getName() {
     try {
       Field name = this.getClass().getDeclaredField("name");
       name.setAccessible(true);

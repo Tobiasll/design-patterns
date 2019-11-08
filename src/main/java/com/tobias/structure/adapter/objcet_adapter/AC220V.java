@@ -2,7 +2,7 @@ package com.tobias.structure.adapter.objcet_adapter;
 
 public class AC220V implements AC {
 
-  private final int NUM =  220;
+  private final int NUM = 220;
 
 
   @Override

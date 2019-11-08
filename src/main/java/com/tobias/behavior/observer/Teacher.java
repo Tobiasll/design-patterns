@@ -13,6 +13,6 @@ public class Teacher implements Observer {
 
   @Override
   public void update(Observable o, Object arg) {
-    System.out.println("teacher : " + name  + " 被观察者对象 ： " + o + " 被观察者传来的参数 : " + arg);
+    System.out.println("teacher : " + name + " 被观察者对象 ： " + o + " 被观察者传来的参数 : " + arg);
   }
 }

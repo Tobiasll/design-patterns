@@ -30,6 +30,6 @@ public class HightResolvedImage implements Image {
 
   @Override
   public void showImage() {
-    System.out.printf("this is real ImageURL %s\n", url );
+    System.out.printf("this is real ImageURL %s\n", url);
   }
 }

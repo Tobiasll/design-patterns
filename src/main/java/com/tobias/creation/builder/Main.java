@@ -15,7 +15,9 @@ public class Main {
     double v = Math.random() * 9000 + 1000;
     System.out.println(v);
     System.out.println(i);
-    String format = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd")).substring(2) + random.nextInt(9999);
+    String format =
+        LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd")).substring(2) + random
+            .nextInt(9999);
     System.out.println(format);
 
   }

@@ -20,9 +20,11 @@ public class Main {
   private static void staticInnerClassSingletonTest() throws Exception {
     StaticInnerClassSingleton staticInnerClassSingleton = StaticInnerClassSingleton.getInstance();
     System.out.println(staticInnerClassSingleton);
-    StaticInnerClassSingleton o = (StaticInnerClassSingleton) serializableAttack(staticInnerClassSingleton);
+    StaticInnerClassSingleton o = (StaticInnerClassSingleton) serializableAttack(
+        staticInnerClassSingleton);
     System.out.println(o);
-    StaticInnerClassSingleton o1 = (StaticInnerClassSingleton) reflectAttack(staticInnerClassSingleton.getClass());
+    StaticInnerClassSingleton o1 = (StaticInnerClassSingleton) reflectAttack(
+        staticInnerClassSingleton.getClass());
     System.out.println(staticInnerClassSingleton == o);
     System.out.println(o1);
     System.out.println(staticInnerClassSingleton == o1);
@@ -52,7 +54,8 @@ public class Main {
     System.out.println(o1);
     System.out.println(doubleLockSingleton == o1);
 
-    DoubleLockSingleton o2 = (DoubleLockSingleton) reflactCloneMethodAttack(doubleLockSingleton.getClass());
+    DoubleLockSingleton o2 = (DoubleLockSingleton) reflactCloneMethodAttack(
+        doubleLockSingleton.getClass());
     System.out.println(o2);
     System.out.println(doubleLockSingleton == o2);
   }
@@ -68,7 +71,7 @@ public class Main {
     EnumSingleton obj = (EnumSingleton) serializableAttack(enumSingleton);
     System.out.println(enumSingleton == obj);
 
-    EnumSingleton o = (EnumSingleton)reflactEnumAttack(enumSingleton.getClass());
+    EnumSingleton o = (EnumSingleton) reflactEnumAttack(enumSingleton.getClass());
     System.out.println(o);
     System.out.println(enumSingleton == o);
 
@@ -102,7 +105,6 @@ public class Main {
     declaredConstructor.setAccessible(true);
     return clone.invoke(declaredConstructor.newInstance());
   }
-
 
 
 }

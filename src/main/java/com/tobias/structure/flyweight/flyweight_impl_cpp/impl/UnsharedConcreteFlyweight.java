@@ -16,7 +16,7 @@ public class UnsharedConcreteFlyweight implements Flyweight {
   @Override
   public void doOperation() {
     System.out.println("class name : " + this.getClass().getSimpleName());
-    System.out.println("object address : " +  System.identityHashCode(this));
+    System.out.println("object address : " + System.identityHashCode(this));
     System.out.println("instrinsic : " + this.allState);
   }
 

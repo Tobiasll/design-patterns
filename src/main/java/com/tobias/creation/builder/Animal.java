@@ -11,6 +11,7 @@ public class Animal {
   }
 
   public static class AnimalBuilder {
+
     private int type;
     private String name;
 

@@ -6,7 +6,8 @@ public class LazySingleton implements Serializable {
 
   private LazySingleton lazySingletonl;
 
-  private LazySingleton() {}
+  private LazySingleton() {
+  }
 
   public synchronized LazySingleton getLazySingletonl() {
     if (lazySingletonl == null) {

@@ -11,10 +11,12 @@ public class HightResolvedImageProxy implements Image {
   @Override
   public void showImage() {
     while (!hightResolvedImage.isLoad()) {
-      System.out.printf("the image hight is %s and width is %s\n", hightResolvedImage.getHight(), hightResolvedImage.getWidth());
+      System.out.printf("the image hight is %s and width is %s\n", hightResolvedImage.getHight(),
+          hightResolvedImage.getWidth());
       try {
         Thread.sleep(100);
-      } catch (InterruptedException ignored) { }
+      } catch (InterruptedException ignored) {
+      }
     }
     hightResolvedImage.showImage();
   }

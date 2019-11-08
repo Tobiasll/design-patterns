@@ -14,5 +14,4 @@ public class HungrySingleton implements Serializable {
   }
 
 
-
 }

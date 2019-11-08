@@ -32,6 +32,7 @@ public class DoubleLockSingleton implements Serializable, Cloneable {
 
   /**
    * 防止序列化破坏
+   *
    * @return 返回当前对象的实例
    */
   private Object readResolve() {

@@ -18,8 +18,6 @@ public class UserDaoProxyFactory implements MethodInterceptor {
   }
 
 
-
-
   @Override
   public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy)
       throws Throwable {
@@ -40,7 +38,6 @@ public class UserDaoProxyFactory implements MethodInterceptor {
     //创建子类对象代理
     return (IUserDao) en.create();
   }
-
 
 
   private void before() {

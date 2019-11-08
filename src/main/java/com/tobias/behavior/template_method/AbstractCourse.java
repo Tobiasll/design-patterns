@@ -1,8 +1,7 @@
 package com.tobias.behavior.template_method;
 
 /**
- * 定义算法框架，并将一些步骤的实现延迟到子类。
- * 通过模板方法，子类可以重新定义算法的某些步骤，而不用改变算法的结构。
+ * 定义算法框架，并将一些步骤的实现延迟到子类。 通过模板方法，子类可以重新定义算法的某些步骤，而不用改变算法的结构。
  *
  * 源码例如：AbstractList, AbstractSet, AbstractMap, HttpServlet::doGet(),doPost(),service() 。。。等等
  */

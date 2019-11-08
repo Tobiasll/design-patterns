@@ -2,8 +2,7 @@ package com.tobias.behavior.chain_of_responsibility;
 
 
 /**
- * 源码：javax.servlet.Filter#doFilter()
- *       java.util.logging.Logger#log()
+ * 源码：javax.servlet.Filter#doFilter() java.util.logging.Logger#log()
  */
 public abstract class Handle {
 

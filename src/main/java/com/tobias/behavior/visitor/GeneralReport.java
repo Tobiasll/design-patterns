@@ -1,10 +1,11 @@
 package com.tobias.behavior.visitor;
 
-public class GeneralReport implements Visitor{
+public class GeneralReport implements Visitor {
 
   private int customerNO;
   private int orderNo;
   private int itemNo;
+
   @Override
   public void visit(Customer customer) {
     System.out.println("visit customer :: " + customer.getName());
@@ -24,6 +25,6 @@ public class GeneralReport implements Visitor{
   }
 
   public void displayResults() {
-    System.out.println("customerNO : " + customerNO + " orderNo " + orderNo + " itemNo "  + itemNo);
+    System.out.println("customerNO : " + customerNO + " orderNo " + orderNo + " itemNo " + itemNo);
   }
 }

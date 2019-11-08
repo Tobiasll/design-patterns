@@ -12,11 +12,10 @@ public class Main {
     CatalogComponent computeCatalog = new CatalogCourseComponent("计算机总目录", 1);
 
     CatalogComponent linuxCatalog = new CatalogCourseComponent("linux目录", 2);
-    linuxCatalog.add(new Course("操作系统",22, 0));
-    linuxCatalog.add(new Course("linux",1, 0));
-    linuxCatalog.add(new Course("计算机网络",33, 0));
-    linuxCatalog.add(new Course("shell",33, 0));
-
+    linuxCatalog.add(new Course("操作系统", 22, 0));
+    linuxCatalog.add(new Course("linux", 1, 0));
+    linuxCatalog.add(new Course("计算机网络", 33, 0));
+    linuxCatalog.add(new Course("shell", 33, 0));
 
     CatalogComponent javaCatalog = new CatalogCourseComponent("java目录", 2);
     javaCatalog.add(arithmeticCourse);

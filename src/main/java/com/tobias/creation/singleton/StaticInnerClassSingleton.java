@@ -9,6 +9,7 @@ public class StaticInnerClassSingleton implements Serializable {
   }
 
   private static class InnerClass {
+
     private static final StaticInnerClassSingleton INSTANCE = new StaticInnerClassSingleton();
   }
 

@@ -1,6 +1,6 @@
 package com.tobias.creation.prototype;
 
-import com.sun.media.jfxmedia.logging.Logger;
+
 import java.lang.reflect.Method;
 import java.text.MessageFormat;
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ public class Prototype implements Cloneable {
       cloneMethod.setAccessible(true);
       clone.list = (List<Object>) cloneMethod.invoke(clone.list);
     } catch (Exception e) {
-      Logger.logMsg(Logger.INFO, e.getMessage());
+
     }
     return clone;
   }

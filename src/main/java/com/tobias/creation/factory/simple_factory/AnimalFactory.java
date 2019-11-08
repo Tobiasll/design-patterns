@@ -5,7 +5,7 @@ import java.lang.reflect.Constructor;
 
 public class AnimalFactory {
 
-  public static Animal createAnimal(Class clazz,String name) {
+  public static Animal createAnimal(Class clazz, String name) {
     try {
       Constructor declaredConstructor = clazz.getDeclaredConstructors()[0];
       declaredConstructor.setAccessible(true);
